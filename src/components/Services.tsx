@@ -1,54 +1,63 @@
+import { Gavel, Users, FileText, Building2, Heart, Briefcase } from "lucide-react";
+
 const Services = () => {
   const services = [
     {
-      number: "01",
-      title: "RESIDENTIAL",
-      description: "Crafting homes that reflect individual lifestyles while maintaining architectural integrity"
+      icon: Gavel,
+      title: "УГОЛОВНЫЕ ДЕЛА",
+      description: "Защита по уголовным делам любой сложности. Представление интересов на всех стадиях уголовного процесса."
     },
     {
-      number: "02", 
-      title: "COMMERCIAL",
-      description: "Designing functional spaces that enhance business environments and user experiences"
+      icon: Users,
+      title: "СЕМЕЙНЫЕ СПОРЫ",
+      description: "Расторжение брака, раздел имущества, определение места жительства детей, алиментные обязательства."
     },
     {
-      number: "03",
-      title: "RENOVATION",
-      description: "Transforming existing structures with contemporary sensibilities and sustainable practices"
+      icon: FileText,
+      title: "ГРАЖДАНСКИЕ ДЕЛА",
+      description: "Защита прав потребителей, взыскание долгов, споры с застройщиками, наследственные дела."
     },
     {
-      number: "04",
-      title: "CONSULTATION",
-      description: "Providing expert guidance on design direction, planning, and architectural solutions"
+      icon: Building2,
+      title: "НЕДВИЖИМОСТЬ",
+      description: "Сопровождение сделок с недвижимостью, споры о праве собственности, земельные вопросы."
+    },
+    {
+      icon: Heart,
+      title: "МЕДИЦИНСКОЕ ПРАВО",
+      description: "Защита прав пациентов, споры с медицинскими учреждениями, компенсация вреда здоровью."
+    },
+    {
+      icon: Briefcase,
+      title: "ТРУДОВЫЕ СПОРЫ",
+      description: "Незаконное увольнение, невыплата заработной платы, восстановление на работе."
     }
   ];
 
   return (
-    <section id="services" className="py-32 bg-background">
+    <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <h2 className="text-minimal text-muted-foreground mb-4">SERVICES</h2>
-            <h3 className="text-4xl md:text-6xl font-light text-architectural">
-              What We Do
+          <div className="text-center mb-16">
+            <h2 className="text-minimal text-accent mb-4">НАПРАВЛЕНИЯ ПРАКТИКИ</h2>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl text-architectural">
+              Юридические услуги
             </h3>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="group">
-                <div className="flex items-start space-x-6">
-                  <span className="text-minimal text-muted-foreground font-medium">
-                    {service.number}
-                  </span>
-                  <div>
-                    <h4 className="text-2xl font-light mb-4 text-architectural group-hover:text-muted-foreground transition-colors duration-500">
-                      {service.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
+              <div 
+                key={index} 
+                className="group p-8 bg-card rounded-lg border border-border hover:border-accent/50 hover:shadow-elegant transition-all duration-500"
+              >
+                <service.icon className="h-10 w-10 text-accent mb-6" />
+                <h4 className="text-xl font-semibold mb-4 text-architectural group-hover:text-accent transition-colors duration-300">
+                  {service.title}
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>

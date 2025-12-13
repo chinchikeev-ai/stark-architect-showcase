@@ -1,68 +1,72 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Portfolio = () => {
-  const projects = [
+  const cases = [
     {
-      image: project1,
-      title: "MINIMAL RESIDENCE",
-      location: "NEW YORK, 2024",
-      description: "A contemporary home focusing on light, space, and material honesty"
+      category: "УГОЛОВНОЕ ДЕЛО",
+      title: "Оправдательный приговор по статье 159 УК РФ",
+      description: "Полное оправдание клиента по обвинению в мошенничестве. Дело прекращено на стадии судебного разбирательства.",
+      result: "Оправдан"
     },
     {
-      image: project2,
-      title: "CORPORATE HEADQUARTERS",
-      location: "LONDON, 2023",
-      description: "Modern office space emphasizing collaboration and natural elements"
+      category: "СЕМЕЙНЫЙ СПОР",
+      title: "Раздел имущества на сумму более 50 млн рублей",
+      description: "Защита интересов клиента при разделе совместно нажитого имущества. Достигнут выгодный результат.",
+      result: "Выиграно"
     },
     {
-      image: project3,
-      title: "CULTURAL CENTER",
-      location: "TOKYO, 2023",
-      description: "Public architecture that bridges tradition with contemporary design"
+      category: "ГРАЖДАНСКОЕ ДЕЛО",
+      title: "Взыскание ущерба с застройщика",
+      description: "Успешное взыскание компенсации за нарушение сроков сдачи объекта долевого строительства.",
+      result: "Взыскано 3.2 млн"
+    },
+    {
+      category: "ТРУДОВОЙ СПОР",
+      title: "Восстановление на работе топ-менеджера",
+      description: "Признание увольнения незаконным, восстановление в должности с выплатой компенсации.",
+      result: "Восстановлен"
     }
   ];
 
   return (
-    <section id="work" className="py-32 bg-muted">
+    <section id="cases" className="py-24 bg-muted/50">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <h2 className="text-minimal text-muted-foreground mb-4">SELECTED WORK</h2>
-            <h3 className="text-4xl md:text-6xl font-light text-architectural">
-              Our Projects
+          <div className="text-center mb-16">
+            <h2 className="text-minimal text-accent mb-4">РЕЗУЛЬТАТЫ РАБОТЫ</h2>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl text-architectural">
+              Успешные дела
             </h3>
           </div>
           
-          <div className="space-y-32">
-            {projects.map((project, index) => (
-              <div key={index} className="group">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {cases.map((caseItem, index) => (
+              <div 
+                key={index} 
+                className="group p-8 bg-card rounded-lg border border-border hover:border-accent/50 hover:shadow-elegant transition-all duration-500"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-minimal text-accent">
+                    {caseItem.category}
+                  </span>
+                  <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
+                    <CheckCircle className="h-4 w-4" />
+                    <span className="text-sm font-medium">{caseItem.result}</span>
+                  </div>
                 </div>
                 
-                <div className="mt-8 grid md:grid-cols-3 gap-8">
-                  <div>
-                    <h4 className="text-2xl font-light text-architectural mb-2">
-                      {project.title}
-                    </h4>
-                    <p className="text-minimal text-muted-foreground">
-                      {project.location}
-                    </p>
-                  </div>
-                  
-                  <div className="md:col-span-2">
-                    <p className="text-muted-foreground leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
+                <h4 className="text-xl font-semibold text-architectural mb-4 group-hover:text-accent transition-colors duration-300">
+                  {caseItem.title}
+                </h4>
+                
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {caseItem.description}
+                </p>
+                
+                <button className="flex items-center gap-2 text-accent hover:gap-3 transition-all duration-300">
+                  <span className="text-sm font-medium">Подробнее</span>
+                  <ArrowRight className="h-4 w-4" />
+                </button>
               </div>
             ))}
           </div>
