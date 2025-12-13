@@ -1,66 +1,123 @@
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 bg-background">
+    <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-20">
+          <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-minimal text-muted-foreground mb-4">GET IN TOUCH</h2>
-              <h3 className="text-4xl md:text-6xl font-light text-architectural mb-12">
-                Let's Create Something
+              <h2 className="text-minimal text-accent mb-4">СВЯЗАТЬСЯ</h2>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl text-architectural mb-8">
+                Запишитесь на
                 <br />
-                Extraordinary
+                консультацию
               </h3>
               
-              <div className="space-y-8">
-                <div>
-                  <h4 className="text-minimal text-muted-foreground mb-2">EMAIL</h4>
-                  <a href="mailto:hello@archstudio.com" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                    hello@archstudio.com
-                  </a>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+                Первичная консультация — бесплатно. Расскажите о вашей ситуации, 
+                и мы вместе найдём оптимальное решение.
+              </p>
+              
+              <div className="space-y-6">
+                <a 
+                  href="tel:+79991234567" 
+                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors duration-300"
+                >
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Phone className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-minimal text-muted-foreground mb-1">ТЕЛЕФОН</p>
+                    <p className="text-xl font-medium">+7 (999) 123-45-67</p>
+                  </div>
+                </a>
+                
+                <a 
+                  href="mailto:advokat@example.ru" 
+                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors duration-300"
+                >
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Mail className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-minimal text-muted-foreground mb-1">EMAIL</p>
+                    <p className="text-xl font-medium">advokat@example.ru</p>
+                  </div>
+                </a>
+                
+                <div className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <MapPin className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-minimal text-muted-foreground mb-1">АДРЕС</p>
+                    <p className="text-xl font-medium">г. Москва, ул. Тверская, д. 1</p>
+                  </div>
                 </div>
                 
-                <div>
-                  <h4 className="text-minimal text-muted-foreground mb-2">PHONE</h4>
-                  <a href="tel:+1234567890" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                    +1 (234) 567-8900
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 className="text-minimal text-muted-foreground mb-2">STUDIO</h4>
-                  <address className="text-xl not-italic">
-                    123 Design Avenue
-                    <br />
-                    New York, NY 10001
-                  </address>
+                <div className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Clock className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-minimal text-muted-foreground mb-1">РЕЖИМ РАБОТЫ</p>
+                    <p className="text-xl font-medium">Пн-Пт: 9:00 - 20:00</p>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div className="space-y-8">
-              <div>
-                <h4 className="text-minimal text-muted-foreground mb-6">FOLLOW US</h4>
-                <div className="space-y-4">
-                  <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
-                    Instagram
-                  </a>
-                  <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
-                    LinkedIn
-                  </a>
-                  <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
-                    Behance
-                  </a>
-                </div>
-              </div>
+            <div className="bg-primary text-primary-foreground p-10 rounded-lg">
+              <h4 className="text-2xl text-architectural mb-6">
+                Оставьте заявку
+              </h4>
+              <p className="text-primary-foreground/80 mb-8">
+                Опишите вашу ситуацию, и я свяжусь с вами в течение 30 минут.
+              </p>
               
-              <div className="pt-12 border-t border-border">
-                <p className="text-muted-foreground">
-                  We approach each project with curiosity, rigor, and a commitment to excellence. 
-                  Our process begins with listening, understanding your vision, and translating 
-                  it into spaces that exceed expectations.
-                </p>
-              </div>
+              <form className="space-y-6">
+                <div>
+                  <label className="text-minimal text-accent mb-2 block">ИМЯ</label>
+                  <input 
+                    type="text" 
+                    placeholder="Ваше имя"
+                    className="w-full px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent"
+                  />
+                </div>
+                
+                <div>
+                  <label className="text-minimal text-accent mb-2 block">ТЕЛЕФОН</label>
+                  <input 
+                    type="tel" 
+                    placeholder="+7 (___) ___-__-__"
+                    className="w-full px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent"
+                  />
+                </div>
+                
+                <div>
+                  <label className="text-minimal text-accent mb-2 block">СООБЩЕНИЕ</label>
+                  <textarea 
+                    rows={4}
+                    placeholder="Кратко опишите вашу ситуацию..."
+                    className="w-full px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent resize-none"
+                  />
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Отправить заявку
+                </Button>
+              </form>
+              
+              <p className="text-sm text-primary-foreground/60 mt-6 text-center">
+                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+              </p>
             </div>
           </div>
         </div>
