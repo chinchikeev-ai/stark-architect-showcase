@@ -22,7 +22,7 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <a 
-                  href="tel:+79991234567" 
+                  href="tel:+79133930700" 
                   className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors duration-300"
                 >
                   <div className="p-3 bg-accent/10 rounded-lg">
@@ -30,12 +30,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-minimal text-muted-foreground mb-1">ТЕЛЕФОН</p>
-                    <p className="text-xl font-medium">+7 (999) 123-45-67</p>
+                    <p className="text-xl font-medium">+7 (913) 393-07-00</p>
                   </div>
                 </a>
                 
                 <a 
-                  href="mailto:advokat@example.ru" 
+                  href="mailto:Ch.legal@mail.ru" 
                   className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors duration-300"
                 >
                   <div className="p-3 bg-accent/10 rounded-lg">
@@ -43,7 +43,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-minimal text-muted-foreground mb-1">EMAIL</p>
-                    <p className="text-xl font-medium">advokat@example.ru</p>
+                    <p className="text-xl font-medium">Ch.legal@mail.ru</p>
                   </div>
                 </a>
                 
@@ -53,7 +53,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-minimal text-muted-foreground mb-1">АДРЕС</p>
-                    <p className="text-xl font-medium">г. Москва, ул. Тверская, д. 1</p>
+                    <p className="text-xl font-medium">г. Новосибирск</p>
                   </div>
                 </div>
                 

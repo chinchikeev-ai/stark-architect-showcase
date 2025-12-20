@@ -22,17 +22,16 @@ const About = () => {
             <div>
               <h2 className="text-minimal text-accent mb-4">ОБ АДВОКАТЕ</h2>
               <h3 className="text-4xl md:text-5xl lg:text-6xl text-architectural mb-8">
-                Иванов Иван Иванович
+                Чинчикеева Алиса Валерьевна
               </h3>
               
               <div className="space-y-6 mb-10">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Адвокат с 15-летним стажем работы. Член Адвокатской палаты города Москвы. 
+                  Адвокат Адвокатской палаты Новосибирской области. 
                   Специализируюсь на сложных уголовных и гражданских делах.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Окончил Московский государственный юридический университет им. О.Е. Кутафина. 
                   Регулярно повышаю квалификацию и слежу за изменениями в законодательстве.
                 </p>
               </div>
@@ -78,8 +77,8 @@ const About = () => {
                   <div className="flex items-start gap-4">
                     <Scale className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-medium">Адвокатская палата г. Москвы</p>
-                      <p className="text-sm opacity-80">Регистрационный номер: 77/12345</p>
+                      <p className="font-medium">Адвокатская палата Новосибирской области</p>
+                      <p className="text-sm opacity-80">Регистрационный номер: 54/1345</p>
                     </div>
                   </div>
                   

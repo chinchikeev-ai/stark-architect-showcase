@@ -27,7 +27,7 @@ const Index = () => {
               </div>
               
               <p className="text-primary-foreground/60 text-sm text-center">
-                © 2024 Адвокат Иванов И.И. Все права защищены.
+                © 2024 Адвокат Чинчикеева А.В. Все права защищены.
               </p>
               
               <div className="flex items-center gap-6">
