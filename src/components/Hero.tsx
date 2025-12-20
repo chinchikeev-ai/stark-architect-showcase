@@ -42,9 +42,12 @@ const Hero = () => {
             size="lg" 
             variant="outline" 
             className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"
+            asChild
           >
-            <Phone className="mr-2 h-5 w-5" />
-            +7 (999) 123-45-67
+            <a href="tel:+79133930700">
+              <Phone className="mr-2 h-5 w-5" />
+              +7 (913) 393-07-00
+            </a>
           </Button>
         </div>
       </div>
