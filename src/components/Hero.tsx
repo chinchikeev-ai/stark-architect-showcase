@@ -16,9 +16,13 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 py-20">
-        <div className="flex justify-center mb-8 reveal">
+        <div className="flex justify-center mb-6 reveal">
           <Shield className="h-16 w-16 text-accent" />
         </div>
+        
+        <p className="text-lg md:text-xl text-white/70 tracking-[0.3em] uppercase mb-4 reveal">
+          Адвокатский кабинет Чинчикеевой А.В.
+        </p>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl text-white text-architectural mb-8 reveal">
           ЗАЩИТА
