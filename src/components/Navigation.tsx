@@ -12,7 +12,7 @@ const Navigation = () => {
         <a href="/" className="flex items-center gap-3">
           <Scale className="h-6 w-6 text-accent" />
           <span className="text-minimal text-foreground font-semibold">
-            Чинчикеева Алиса Валерьевна
+            Адвокатский кабинет Чинчикеевой Алисы Валерьевны
           </span>
         </a>
         

@@ -36,7 +36,7 @@ const Hero = () => {
             size="lg" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
           >
-            Бесплатная консультация
+            Консультация
           </Button>
           <Button 
             size="lg" 
