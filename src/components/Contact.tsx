@@ -16,7 +16,7 @@ const Contact = () => {
               </h3>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-                Первичная консультация — бесплатно. Расскажите о вашей ситуации, 
+                Расскажите о вашей ситуации, 
                 и мы вместе найдём оптимальное решение.
               </p>
               
@@ -53,7 +53,17 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-minimal text-muted-foreground mb-1">АДРЕС</p>
-                    <p className="text-xl font-medium">г. Новосибирск</p>
+                    <p className="text-xl font-medium">г. Новосибирск, ул. Галущака, 2а, оф. 34</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Mail className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-minimal text-muted-foreground mb-1">ПОЧТОВЫЙ АДРЕС</p>
+                    <p className="text-xl font-medium">630099 г. Новосибирск а/я 141</p>
                   </div>
                 </div>
                 

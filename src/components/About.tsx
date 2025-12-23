@@ -1,10 +1,8 @@
-import { Award, BookOpen, Scale, CheckCircle } from "lucide-react";
+import { BookOpen, Scale, CheckCircle } from "lucide-react";
 
 const About = () => {
   const achievements = [
-    { number: "500+", label: "Выигранных дел" },
     { number: "15", label: "Лет практики" },
-    { number: "98%", label: "Довольных клиентов" },
   ];
 
   const advantages = [
@@ -48,7 +46,7 @@ const About = () => {
             
             <div className="space-y-8">
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6">
+              <div className="flex justify-center">
                 {achievements.map((stat, index) => (
                   <div key={index} className="text-center p-6 bg-card rounded-lg border border-border">
                     <div className="text-3xl md:text-4xl font-bold text-accent mb-2">
@@ -69,8 +67,8 @@ const About = () => {
                   <div className="flex items-start gap-4">
                     <BookOpen className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-medium">МГЮА им. О.Е. Кутафина</p>
-                      <p className="text-sm opacity-80">Юриспруденция, красный диплом</p>
+                      <p className="font-medium">НЮИ (ф) ТГУ</p>
+                      <p className="text-sm opacity-80">Юриспруденция</p>
                     </div>
                   </div>
                   
@@ -78,15 +76,7 @@ const About = () => {
                     <Scale className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-medium">Адвокатская палата Новосибирской области</p>
-                      <p className="text-sm opacity-80">Регистрационный номер: 54/1345</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <Award className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-medium">Лучший адвокат 2023</p>
-                      <p className="text-sm opacity-80">По версии Legal 500</p>
+                      <p className="text-sm opacity-80">Регистрационный номер в Едином реестре адвокатов Российской Федерации: 54/1345</p>
                     </div>
                   </div>
                 </div>

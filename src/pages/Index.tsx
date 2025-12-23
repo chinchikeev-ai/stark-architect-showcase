@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
-import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import { Scale } from "lucide-react";
 
@@ -13,7 +12,6 @@ const Index = () => {
       <Hero />
       <Services />
       <About />
-      <Portfolio />
       <Contact />
       
       {/* Footer */}
@@ -23,7 +21,7 @@ const Index = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-3">
                 <Scale className="h-6 w-6 text-accent" />
-                <span className="text-minimal font-semibold">ПРАВО И ЗАЩИТА</span>
+                <span className="text-minimal font-semibold">Адвокатский кабинет Чинчикеевой А.В.</span>
               </div>
               
               <p className="text-primary-foreground/60 text-sm text-center">
